@@ -13,3 +13,7 @@ public class BlogPostController {
         return "blogpost/index";
     }
 }
+
+// @Controller - this class annotation helps send out the template, rather than write directly from the controller
+
+// @GetMapping - this annotation used for index method, returns specified template, 'index' in blog post template directory
