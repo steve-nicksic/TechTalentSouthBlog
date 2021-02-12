@@ -36,4 +36,14 @@ public class BlogPost {
     public void setBlogEntry(String blogEntry) {
         this.blogEntry = blogEntry;
     }
+
+    @Override
+    public String toString() {
+        return "BlogPost{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", blogEntry='" + blogEntry + '\'' +
+                '}';
+    }
 }
