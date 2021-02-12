@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Blog Site</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -7,5 +7,33 @@
 <body>
 <h1>Welcome to Our Blog Post Site!</h1>
 <h3>Check out our blogs!</h3>
+<p>Please use the form below to submit a Blog Post:</p>
+<form action="#" th:action="@{/}" th:object="${blogPost}" method="post">
+    <table>
+        <tr>
+            <td>Title</td>
+            <td><input type="text" th:field="*{title}" /></td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" th:field="*{author}" /></td>
+        </tr>
+        <tr>
+            <td>Blog Entry:</td>
+            <td><input type="text" th:field="*{blogEntry}" /></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit Your Post</button></td>
+        </tr>
+    </table>
+</form>
+
 </body>
 </html>
+// th:* attribute gets namespace declared as Thymeleaf stores our subscribers input for the database as variables
+
+// The form is added in the body bringing in the title, author, and blog entry of the blog post
+// It is set up like an HTML form. Notice the "th:" attribute in the tags to make connection between our database tables
+// and the form
+
+// Notice, the field names reference the attribute of our Blog Post Class (fields in our database table)
