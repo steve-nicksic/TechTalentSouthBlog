@@ -1,0 +1,23 @@
+[33mcommit 5f9f66248d2cad7619ad5f9a93e75162b8389b4c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: steve-nicksic <65583459+steve-nicksic@users.noreply.github.com>
+Date:   Fri Feb 12 10:14:01 2021 -0600
+
+    added toString() override
+
+[33mcommit 1ed9e46a19f6d317979d6dec6b7ccb05dd4985b3[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: steve-nicksic <65583459+steve-nicksic@users.noreply.github.com>
+Date:   Fri Feb 12 10:03:28 2021 -0600
+
+    Created blog post class under a new 'method' package
+
+[33mcommit 609f75c8887983360713745c4c3dc2502de884a5[m
+Author: steve-nicksic <65583459+steve-nicksic@users.noreply.github.com>
+Date:   Wed Feb 10 09:13:32 2021 -0600
+
+    Updated application properties to allow us to interact with the database.
+
+[33mcommit 9e06623256bbd9910053cd948a8508cfcc88f539[m
+Author: steve-nicksic <65583459+steve-nicksic@users.noreply.github.com>
+Date:   Wed Feb 10 08:57:58 2021 -0600
+
+    Initial commit

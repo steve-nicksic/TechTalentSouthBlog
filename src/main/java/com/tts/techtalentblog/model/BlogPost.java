@@ -1,11 +1,22 @@
 package com.tts.techtalentblog.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class BlogPost {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
     private String author;
     private String blogEntry;
+
+    public BlogPost() {      // non-argument constructor needed for JPA
+    }
 
     public BlogPost(String title, String author, String blogEntry) {
         this.title = title;
@@ -47,3 +58,8 @@ public class BlogPost {
                 '}';
     }
 }
+
+//annotations tie the class to the JPA and database
+// @Entity designates a POJO class as an entity to use w/JPA
+// @Id - the JPA will recognize it as object's ID and primary key
+// @GeneratedValue - allows underlying db to set value for the field
