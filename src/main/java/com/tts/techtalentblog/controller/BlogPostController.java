@@ -9,14 +9,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class BlogPostController {
 
     @Autowired
     private BlogPostRepository blogPostRepository;
+    private static List<BlogPost> posts = new ArrayList<>();
 
     @GetMapping(value = "/")
-    public String index(BlogPost blogPost) {
+    public String index(BlogPost blogPost, Model model) {
+        model.addAttribute("posts", posts);
         return "blogpost/index";
     }
 
